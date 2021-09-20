@@ -1,9 +1,6 @@
-const assertEqual = function(actual, expected) {
-  return (actual === expected ? (`✅✅✅Assertion Passed: ${actual} === ${expected} `) : (`🛑🛑🛑Assertion Failed: ${actual} !== ${expected} `));
-};
+const assertEqual = require('./assertEqual');
 
-console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.log(assertEqual(1, 1));
+assertEqual();
 
 const tail = function(array) {
   let newArray = []
@@ -15,9 +12,4 @@ const tail = function(array) {
   return newArray
 }
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-
-
-console.log(tail([1, 2, 3, 4, 5]));
-console.log(tail(words));
-console.log(assertEqual(words.length, 3))
+module.exports = tail;
